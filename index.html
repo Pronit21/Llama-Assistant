@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Store</title>
+    <title>Guruji Air</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
       * {
@@ -47,14 +47,12 @@
       }
       .merc {
         max-width: 500px;
-        height: auto;
+        height: 500px;
       }
       .contentleft {
         flex: 1;
       }
-      .contentmid {
-        flex: 2;
-      }
+
       .contentright {
         flex: 1;
       }
@@ -71,7 +69,7 @@
         margin: 30px 0px;
       }
       .btn {
-        padding: 15px 30px;
+        padding: 15px 32px;
         color: black;
         background: white;
         outline: none;
@@ -79,7 +77,13 @@
         font-weight: 700;
         text-transform: uppercase;
         border-radius: 50px;
+        margin-right: 40px; /* Add margin to the right side of the button */
       }
+
+      .btn:last-child {
+        margin-right: 0; /* Remove margin from the last button */
+      }
+
       .btn:hover {
         background-color: #2c2c2c;
         color: white;
@@ -106,7 +110,6 @@
       <nav>
         <ul>
           <li><a href="#"> Home </a></li>
-          <li><a href="#"> Offers </a></li>
           <li><a href="#"> Explore Now </a></li>
           <li><a href="#"> Visit Now </a></li>
           <li><a href="#"> About Us </a></li>
@@ -116,25 +119,35 @@
     </header>
     <main>
       <div class="contentleft">
-        <h2>Mercury</h2>
+        <img src="llama-303600_1280.png" class="merc" />
       </div>
-      <div class="contentmid">
-        <p>
-          Mercury, the innermost planet of the solar system and the eighth in
-          size and mass. Its closeness to the Sun and its smallness make it the
-          most elusive of the planets visible to the unaided eye. Because its
-          rising or setting is always within about two hours of the Sun’s, it is
-          never observable when the sky is fully dark. Mercury is designated by
-          the symbol ☿. <br />
-          Mercury is the closest planet to the Sun, at a distance of 57.91
-          million kilometers / 35.98 miles or 0.4 AU away. It takes sunlight 3.2
-          minutes to travel from the Sun to Mercury.
-        </p>
-        <button class="btn">Explore Now</button>
-      </div>
+
       <div class="contentright">
-        <img src="person_12918392.png" class="merc" />
+        <button class="btn" id="startBtn">Start Talking</button>
+        <button class="btn" id="stopBtn">Stop</button>
       </div>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const startBtn = document.getElementById("startBtn");
+        const stopBtn = document.getElementById("stopBtn");
+
+        // Function to start the AI assistant
+        function startAssistant() {
+          // Add your code to start the AI assistant here
+          console.log("AI assistant started.");
+        }
+
+        // Function to stop the AI assistant
+        function stopAssistant() {
+          // Add your code to stop the AI assistant here
+          console.log("AI assistant stopped.");
+        }
+
+        startBtn.addEventListener("click", startAssistant);
+        stopBtn.addEventListener("click", stopAssistant);
+      });
+    </script>
   </body>
 </html>
