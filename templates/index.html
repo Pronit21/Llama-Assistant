@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guruji Air</title>
+    
+  
+  </head>
+  <body>
+    <header>
+      <div class="logo">Logo</div>
+      <nav>
+        <ul>
+          <li><a href="#"> Home </a></li>
+          <li><a href="#"> Explore Now </a></li>
+          <li><a href="#"> Visit Now </a></li>
+          <li><a href="#"> About Us </a></li>
+          <li><a href="#" class="signup"> Sign Up </a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="contentleft">
+        <img src="{{ url_for('static', filename='images/llama.png')}}" class="merc" alt="Llama image">
+      </div>
+
+      <div class="contentright">
+        <button class="btn" id="startBtn">Start Talking</button>
+        <button class="btn" id="stopBtn">Stop</button>
+      </div>
+    </main>
+
+  </body>
+</html>
