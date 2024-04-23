@@ -6,8 +6,15 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/start_assistant', methods=['POST'])
+def start_assistant():
+    return jsonify({'message': 'Assistant started'})
 
-# Route to serve static files (CSS, JavaScript, images, etc.)
+@app.route('/stop_assistant', methods=['POST'])
+def stop_assistant():
+    return jsonify({'message': 'Assistant stopped'})
+
+
 @app.route('/static/<path:path>')
 def serve_static(path):
     try:
